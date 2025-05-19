@@ -1,0 +1,27 @@
+# maven
+/target/
+/pom.xml.tag
+/pom.xml.releaseBackup
+/pom.xml.versionsBackup
+/logging.properties
+
+# IntelliJ IDEA
+/.idea/
+/*.iml
+/out/
+/*.ipr
+/*.iws
+
+# springboot
+spring.log
+
+# logs
+logs/
+*.log
+
+# h2 database
+/data/
+*.mv.db
+*.trace.db
+
+*.class

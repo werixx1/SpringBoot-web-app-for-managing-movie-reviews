@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.util.PathMatcher;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -79,6 +80,12 @@ public class MovieController
         {
             return ResponseEntity.notFound().build();
         }
+    }
+
+    @GetMapping
+    public List<Movie> getAllMovies()
+    {
+        return movieService.getAllMovies();
     }
 }
 

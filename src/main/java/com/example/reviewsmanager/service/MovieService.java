@@ -4,6 +4,8 @@ import com.example.reviewsmanager.model.Movie;
 import com.example.reviewsmanager.repository.MovieRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -56,5 +58,10 @@ public class MovieService
             return movieRepository.save(movie);
         }
         return null;
+    }
+
+    public List<Movie> getAllMovies()
+    {
+        return movieRepository.findAll();
     }
 }

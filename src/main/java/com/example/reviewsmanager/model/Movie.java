@@ -21,6 +21,7 @@ public class Movie
 
     private String title;
     @Enumerated(EnumType.STRING)
+    @Column(name = "genre")
     private Genre genre;
 
     private String mainDirector;

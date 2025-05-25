@@ -8,7 +8,8 @@ public enum ProfileIcon
     FROWN(":("),
     WINK(";)"),
     SILLY(":P"),
-    SURPRISE(":0");
+    SURPRISE(":0"),
+    CHILL("B)");
 
     private final String symbol;
     ProfileIcon(String symbol)

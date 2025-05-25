@@ -13,6 +13,7 @@ import java.util.List;
 @Getter
 @Setter
 @Entity
+@Table(name = "app_user")
 public class User
 {
     @Id
@@ -24,8 +25,10 @@ public class User
     private String password;
 
     @Enumerated(EnumType.STRING)
+    @Column(name = "profile_icon")
     private ProfileIcon profileIcon;
     @Enumerated(EnumType.STRING)
+    @Column(name = "role")
     private Role role;
 
     @OneToMany(mappedBy = "author", cascade = CascadeType.ALL, orphanRemoval = true)

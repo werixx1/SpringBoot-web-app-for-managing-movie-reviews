@@ -1,5 +1,7 @@
 package com.example.reviewsmanager.model;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -14,6 +16,7 @@ import java.util.List;
 @Setter
 @Entity
 @Table(name = "app_user")
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 public class User
 {
     @Id
@@ -34,5 +37,15 @@ public class User
     @OneToMany(mappedBy = "author", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Review> reviewsPosted = new ArrayList<>();
 
-    // private Integer numberOfReviews = reviewsPosted.size();
+    // todo: something like private Integer numberOfReviews = reviewsPosted.size();
+    // maybe not in constructor?
+
+    public User(String username, String email, String password, ProfileIcon profileIcon, Role role)
+    {
+        this.username = username;
+        this.email = email;
+        this.password = password;
+        this.profileIcon = profileIcon;
+        this.role = role;
+    }
 }

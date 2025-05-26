@@ -1,5 +1,7 @@
 package com.example.reviewsmanager.model;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -13,6 +15,7 @@ import java.util.List;
 @Getter
 @Setter
 @Entity
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 public class Movie
 {
     @Id
@@ -29,4 +32,14 @@ public class Movie
 
     @OneToMany(mappedBy = "movie", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Review> reviews = new ArrayList<>();
+
+    // for sample data
+    public Movie(String title, Genre genre, String mainDirector, Integer releaseYear)
+    {
+        this.title = title;
+        this.genre = genre;
+        this.mainDirector = mainDirector;
+        this.releaseYear = releaseYear;
+    }
+
 }

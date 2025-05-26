@@ -1,7 +1,9 @@
 package com.example.reviewsmanager.service;
 
+import com.example.reviewsmanager.model.Genre;
 import com.example.reviewsmanager.model.Movie;
 import com.example.reviewsmanager.repository.MovieRepository;
+import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -24,9 +26,14 @@ public class MovieService
         return movieRepository.findMovieByTitle(title);
     }
 
-    public Movie save(Movie movie)
+    public Optional<Movie> getMovieById(Long id)
     {
-        return movieRepository.save(movie);
+        return movieRepository.findById(id);
+    }
+
+    public List<Movie> getMoviesByGenre(Genre genre)
+    {
+        return movieRepository.findMoviesByGenre(genre);
     }
 
     public boolean deleteMovieById(Long id)
@@ -37,11 +44,6 @@ public class MovieService
             return true;
         }
         return false;
-    }
-
-    public Optional<Movie> getMovieById(Long id)
-    {
-        return movieRepository.findById(id);
     }
 
     public Movie updateMovie(Long id, Movie newMovieData)
@@ -57,7 +59,7 @@ public class MovieService
 
             return movieRepository.save(movie);
         }
-        return null;
+        throw new EntityNotFoundException("Movie with id " + id + " not found");
     }
 
     public List<Movie> getAllMovies()

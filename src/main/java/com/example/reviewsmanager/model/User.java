@@ -33,4 +33,6 @@ public class User
 
     @OneToMany(mappedBy = "author", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Review> reviewsPosted = new ArrayList<>();
+
+    // private Integer numberOfReviews = reviewsPosted.size();
 }

@@ -1,5 +1,6 @@
 package com.example.reviewsmanager.controller;
 
+import com.example.reviewsmanager.model.Genre;
 import com.example.reviewsmanager.model.Movie;
 import com.example.reviewsmanager.repository.MovieRepository;
 import com.example.reviewsmanager.service.MovieService;
@@ -24,10 +25,10 @@ public class MovieController
         this.movieService = movieService;
     }
 
-    @PostMapping("")
+    @PostMapping
     public ResponseEntity<Movie> addMovie(@RequestBody Movie movie)
     {
-       Movie savedMovie = movieService.addMovie(movie);
+        Movie savedMovie = movieService.addMovie(movie);
         return ResponseEntity.status(HttpStatus.CREATED).body(savedMovie);
     }
 
@@ -51,6 +52,17 @@ public class MovieController
             return ResponseEntity.ok(movieByTitle);
         }
         else return ResponseEntity.notFound().build();
+    }
+
+    @GetMapping("/genre/{genre}")
+    public ResponseEntity<List<Movie>> getMovieByGenre(@PathVariable("genre") Genre genre)
+    {
+        List<Movie> movies = movieService.getMoviesByGenre(genre);
+        if (movies.isEmpty())
+        {
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.ok(movies);
     }
 
     @PutMapping("/{id}")

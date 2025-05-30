@@ -2,12 +2,10 @@ package com.example.reviewsmanager.controller;
 
 import com.example.reviewsmanager.model.Genre;
 import com.example.reviewsmanager.model.Movie;
-import com.example.reviewsmanager.repository.MovieRepository;
 import com.example.reviewsmanager.service.MovieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.util.PathMatcher;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -55,7 +53,7 @@ public class MovieController
     }
 
     @GetMapping("/genre/{genre}")
-    public ResponseEntity<List<Movie>> getMovieByGenre(@PathVariable("genre") Genre genre)
+    public ResponseEntity<List<Movie>> getMoviesByGenre(@PathVariable("genre") Genre genre)
     {
         List<Movie> movies = movieService.getMoviesByGenre(genre);
         if (movies.isEmpty())
@@ -98,6 +96,24 @@ public class MovieController
     public List<Movie> getAllMovies()
     {
         return movieService.getAllMovies();
+    }
+
+    @GetMapping("/best-rated-movie/genre/{genre}")
+    public Movie getBestRatedMovieByGenre(@PathVariable Genre genre)
+    {
+        return movieService.getBestRatedMovieByGenre(genre);
+    }
+
+    @GetMapping("/worst-rated-movie/genre/{genre}")
+    public Movie getWorstRatedMovieByGenre(@PathVariable Genre genre)
+    {
+        return movieService.getWorstRatedMovieByGenre(genre);
+    }
+
+    @GetMapping("/movie-with-most-reviews")
+    public Movie getMovieWithMostReviews()
+    {
+        return movieService.getMovieWithMostReviews();
     }
 }
 

@@ -1,6 +1,7 @@
 package com.example.reviewsmanager.model;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -25,6 +26,7 @@ public class User
 
     private String username;
     private String email;
+    @JsonIgnore // because password is sensitive information
     private String password;
 
     @Enumerated(EnumType.STRING)

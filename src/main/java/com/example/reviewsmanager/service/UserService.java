@@ -65,4 +65,14 @@ public class UserService
         }
         throw new EntityNotFoundException("User with id " + id + " not found");
     }
+
+    public User getUserWithMostReviews()
+    {
+        return userRepository.findUserWithMostReviews();
+    }
+
+    public List<User> getInactiveUsers()
+    {
+        return userRepository.findInactiveUsers();
+    }
 }

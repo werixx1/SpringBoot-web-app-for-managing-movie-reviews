@@ -94,4 +94,10 @@ public class ReviewController
     {
         return reviewService.getAllReviews();
     }
+
+    @GetMapping("/latest-review")
+    public ResponseEntity<Review> getLatestReview()
+    {
+        return ResponseEntity.ok(reviewService.getLatestReview());
+    }
 }

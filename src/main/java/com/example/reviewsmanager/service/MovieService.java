@@ -66,4 +66,19 @@ public class MovieService
     {
         return movieRepository.findAll();
     }
+
+    public Movie getBestRatedMovieByGenre(Genre genre)
+    {
+        return movieRepository.findBestRatedMovieByGenreOrderByAverageStarsDesc(genre);
+    }
+
+    public Movie getWorstRatedMovieByGenre(Genre genre)
+    {
+        return movieRepository.findWorstRatedMovieByGenreOrderByAverageStarsAsc(genre);
+    }
+
+    public Movie getMovieWithMostReviews()
+    {
+        return movieRepository.findMovieWithMostReviews();
+    }
 }

@@ -6,6 +6,7 @@ inspo = https://letterboxd.com/
 
 - https://www.youtube.com/watch?v=7nonQ2dYgiE
 - https://www.youtube.com/watch?v=ZZTYQIUd_uY
+- https://www.youtube.com/watch?v=eSaXN7WqQKI
 
 ## 
 requirements:

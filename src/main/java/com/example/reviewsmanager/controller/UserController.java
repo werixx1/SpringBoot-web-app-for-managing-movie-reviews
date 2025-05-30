@@ -84,4 +84,16 @@ public class UserController
             return ResponseEntity.notFound().build();
         }
     }
+
+    @GetMapping("/user-with-most-reviews")
+    public User getUserWithMostReviews()
+    {
+        return userService.getUserWithMostReviews();
+    }
+
+    @GetMapping("/inactive-users")
+    public ResponseEntity<List<User>> getInactiveUsers()
+    {
+        return ResponseEntity.ok(userService.getInactiveUsers());
+    }
 }

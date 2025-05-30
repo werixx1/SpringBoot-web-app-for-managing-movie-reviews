@@ -88,4 +88,9 @@ public class ReviewService
     {
         return reviewRepository.findAll();
     }
+
+    public Review getLatestReview()
+    {
+        return reviewRepository.findFirstByOrderByPostedOnDesc();
+    }
 }

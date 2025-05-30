@@ -7,6 +7,8 @@ inspo = https://letterboxd.com/
 - https://www.youtube.com/watch?v=7nonQ2dYgiE
 - https://www.youtube.com/watch?v=ZZTYQIUd_uY
 - https://www.youtube.com/watch?v=eSaXN7WqQKI
+- https://docs.spring.io/spring-data/jpa/reference/jpa/query-methods.html
+- https://www.youtube.com/watch?v=MAIkC9KctVw
 
 ## 
 requirements:
@@ -14,9 +16,11 @@ requirements:
 selected resources (e.g. books in the library, products in the store, tasks in
 the project) ✔️
 - ability to assign resources to users ✔️
-- ability to search, filter and sort data 
+- ability to search, filter and sort data ✔️
 - use of the dependency injection mechanism ✔️
-- statistics + raports (sorting, filtring, best rated movies, newest reviews etc)
+- statistics (sorting, filtring, best rated movies, newest reviews etc) ✔️
+- raports !!!!!
+-----
 - DTO for creating users etc
 - guide for this repo and postman
 - link useful recources

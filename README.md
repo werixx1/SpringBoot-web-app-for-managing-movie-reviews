@@ -1,8 +1,7 @@
 # SpringBoot-web-app-for-managing-movie-reviews
-(website screenshot here) \
-inspo = https://letterboxd.com/ 
+![obraz](https://github.com/user-attachments/assets/9d286d7f-0aff-4453-8697-42a8cda0d5a8)
 
-![x](https://github.com/user-attachments/assets/c533fbad-4085-436b-b909-5337bad9f999)
+inspo = https://letterboxd.com/ 
 
 - https://www.youtube.com/watch?v=7nonQ2dYgiE
 - https://www.youtube.com/watch?v=ZZTYQIUd_uY

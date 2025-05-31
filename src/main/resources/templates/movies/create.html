@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Reviews Manager</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Turret+Road&display=swap" rel="stylesheet">
+    <style>
+        body
+        {
+            font-family: 'Turret Road', cursive;
+        }
+    </style>
+</head>
+<body data-bs-theme="dark">
+<div class="container my-3">
+    <div class="row">
+        <div class="col-md-8 mx-auto rounded border p-4">
+            <h2 class="text-center mb-5">New Movie</h2>
+            <form method="post" th:object="${movieDTO}">
+
+            <div class="row mb-3">
+                <label for="title" class="col-sm-4 col-form-label">Title</label>
+                <div class="col-sm-8">
+                    <input id="title" class="form-control" th:field="*{title}">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label for="genre" class="col-sm-4 col-form-label">Genre</label>
+                <div class="col-sm-8">
+                    <select id="genre" class="form-select" th:field="*{genre}">
+                        <option value="SCIFI">SCIFI</option>
+                        <option value="ADVENTURE">ADVENTURE</option>
+                        <option value="ANIMATION">ANIMATION</option>
+                        <option value="COMEDY">COMEDY</option>
+                        <option value="CRIME">CRIME</option>
+                        <option value="DOCUMENTARY">DOCUMENTARY</option>
+                        <option value="DRAMA">DRAMA</option>
+                        <option value="FAMILY">FAMILY</option>
+                        <option value="FANTASY">FANTASY</option>
+                        <option value="HISTORY">HISTORY</option>
+                        <option value="HORROR">HORROR</option>
+                        <option value="MUSIC">MUSIC</option>
+                        <option value="MYSTERY">MYSTERY</option>
+                        <option value="ROMANCE">ROMANCE</option>
+                        <option value="THRILLER">THRILLER</option>
+                        <option value="WAR">WAR</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label for="mainDirector" class="col-sm-4 col-form-label">Main Director</label>
+                <div class="col-sm-8">
+                    <input id="mainDirector" class="form-control" th:field="*{mainDirector}">
+                </div>
+            </div>
+
+                <div class="row mb-3">
+                    <label for="releaseYear" class="col-sm-4 col-form-label">Release Year</label>
+                    <div class="col-sm-8">
+                        <input id="releaseYear" class="form-control" th:field="*{releaseYear}"
+                               maxlength="4" pattern="\d{4}">
+                    </div>
+                </div>
+
+                <div class="row">
+                <div class="offset-sm-4 col-sm-4 d-grid">
+                    <button type="submit" class="btn btn-outline-light">Submit</button>
+                </div>
+
+                <div class="col-sm-4 d-grid">
+                    <a class="btn btn-outline-danger" href="/movies">Cancel</a>
+                </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

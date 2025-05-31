@@ -5,13 +5,11 @@ import com.example.reviewsmanager.model.Movie;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
-
 import java.util.List;
-import java.util.Optional;
 
-public interface MovieRepository extends JpaRepository<Movie, Long>
-{
+public interface MovieRepository extends JpaRepository<Movie, Long> {
     Movie findMovieByTitle(String title);
+
     List<Movie> findMoviesByGenre(Genre genre);
 
     // STATISTICS
@@ -45,4 +43,4 @@ public interface MovieRepository extends JpaRepository<Movie, Long>
     ORDER BY COUNT(r) DESC
     """)
     Movie findMovieWithMostReviews();
-}
+  }

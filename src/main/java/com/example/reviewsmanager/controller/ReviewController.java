@@ -1,13 +1,11 @@
 package com.example.reviewsmanager.controller;
 
-import com.example.reviewsmanager.model.Movie;
 import com.example.reviewsmanager.model.Review;
 import com.example.reviewsmanager.service.MovieService;
 import com.example.reviewsmanager.service.ReviewService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 import java.util.Optional;
 

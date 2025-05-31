@@ -6,7 +6,6 @@ import com.example.reviewsmanager.repository.MovieRepository;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.Optional;
 
@@ -81,4 +80,5 @@ public class MovieService
     {
         return movieRepository.findMovieWithMostReviews();
     }
+
 }

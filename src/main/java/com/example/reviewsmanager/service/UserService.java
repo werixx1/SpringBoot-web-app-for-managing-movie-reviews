@@ -1,12 +1,10 @@
 package com.example.reviewsmanager.service;
 
-import com.example.reviewsmanager.model.Movie;
 import com.example.reviewsmanager.model.User;
 import com.example.reviewsmanager.repository.UserRepository;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.Optional;
 

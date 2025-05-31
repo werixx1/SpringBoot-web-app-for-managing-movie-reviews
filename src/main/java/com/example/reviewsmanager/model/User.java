@@ -57,4 +57,10 @@ public class User
         return reviewsPosted != null ? reviewsPosted.size() : 0;
     }
 
+    @Override
+    public String toString()
+    {
+        return username;
+    }
+
 }

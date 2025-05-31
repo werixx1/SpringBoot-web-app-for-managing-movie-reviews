@@ -38,6 +38,7 @@ public class User
     private Role role;
 
     @OneToMany(mappedBy = "author", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonIgnore // for cleaner json when displaying users
     private List<Review> reviewsPosted = new ArrayList<>();
 
     public User(String username, String email, String password, ProfileIcon profileIcon, Role role)

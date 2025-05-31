@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import static java.util.stream.Collectors.*;
 
 import java.util.Map;
+import java.util.stream.Collectors;
 
 import static java.util.stream.Collectors.counting;
 import static java.util.stream.Collectors.groupingBy;
@@ -35,6 +36,10 @@ public class RaportService
         long reviews = reviewRepository.count();
         long movies = movieRepository.count();
 
-        return new RaportDTO(users, reviews, movies);
+        // calculate how many movies are for each genre
+        Map<Genre, Long> genreFrequency = movieRepository.findAll().stream()
+                .collect(Collectors.groupingBy(Movie::getGenre, Collectors.counting()));
+
+        return new RaportDTO(users, reviews, movies, genreFrequency);
     }
 }

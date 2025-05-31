@@ -1,9 +1,7 @@
 package com.example.reviewsmanager.controller;
-import com.example.reviewsmanager.dto.MovieDTO;
+
 import com.example.reviewsmanager.dto.UserDTO;
-import com.example.reviewsmanager.model.Movie;
 import com.example.reviewsmanager.model.User;
-import com.example.reviewsmanager.repository.MovieRepository;
 import com.example.reviewsmanager.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

@@ -1,4 +1,5 @@
 package com.example.reviewsmanager.dto;
+
 import com.example.reviewsmanager.model.ProfileIcon;
 import com.example.reviewsmanager.model.Role;
 import lombok.Getter;

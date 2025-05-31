@@ -10,8 +10,6 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
-import java.util.Locale;
-
 @Component
 @Order(3)
 public class ReviewSampleDataLoader implements CommandLineRunner

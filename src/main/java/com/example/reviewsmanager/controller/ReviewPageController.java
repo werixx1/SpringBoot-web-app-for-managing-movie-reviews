@@ -1,13 +1,10 @@
 package com.example.reviewsmanager.controller;
 
 import com.example.reviewsmanager.dto.ReviewDTO;
-import com.example.reviewsmanager.dto.UserDTO;
 import com.example.reviewsmanager.model.Movie;
 import com.example.reviewsmanager.model.Review;
 import com.example.reviewsmanager.model.User;
-import com.example.reviewsmanager.repository.MovieRepository;
 import com.example.reviewsmanager.repository.ReviewRepository;
-import com.example.reviewsmanager.repository.UserRepository;
 import com.example.reviewsmanager.service.MovieService;
 import com.example.reviewsmanager.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,9 +15,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
 import java.util.List;
-import java.util.Optional;
+
 
 @Controller
 @RequestMapping("/reviews")

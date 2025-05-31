@@ -7,13 +7,8 @@ import com.example.reviewsmanager.repository.MovieRepository;
 import com.example.reviewsmanager.repository.ReviewRepository;
 import com.example.reviewsmanager.repository.UserRepository;
 import org.springframework.stereotype.Service;
-import static java.util.stream.Collectors.*;
-
 import java.util.Map;
 import java.util.stream.Collectors;
-
-import static java.util.stream.Collectors.counting;
-import static java.util.stream.Collectors.groupingBy;
 
 @Service
 public class RaportService

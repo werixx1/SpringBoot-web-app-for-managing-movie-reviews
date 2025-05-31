@@ -28,8 +28,17 @@ public class UserSampleDataLoader implements CommandLineRunner
                     ProfileIcon.CHILL, Role.USER);
             User user2 = new User("podsiadlo", "podsiadlo.usiadlo@gmail.com", "haslomaslo",
                     ProfileIcon.SILLY, Role.USER);
+            User user3 = new User("moviehater1", "ihatemovies@gmail.com", "nottelling1",
+                    ProfileIcon.FROWN, Role.USER);
+            User user4 = new User("movielover2", "ilovemovies@gmail.com","password_",
+                    ProfileIcon.SMILE, Role.USER);
+            User user5 = new User("im_not_active", "goodmorning@gmail.com", "123321",
+                    ProfileIcon.WINK, Role.USER);
             userRepository.save(user1);
             userRepository.save(user2);
+            userRepository.save(user3);
+            userRepository.save(user4);
+            userRepository.save(user5);
             System.out.println("Sample users added to database");
         }
         else

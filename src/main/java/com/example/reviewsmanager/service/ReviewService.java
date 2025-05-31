@@ -76,9 +76,7 @@ public class ReviewService
             review.setTitle(newReviewData.getTitle());
             review.setNumberOfStars(newReviewData.getNumberOfStars());
             review.setTextReview(newReviewData.getTextReview());
-            // todo: somehow add string to localdate
-            // review.setPostedOn("Edited on:", newReviewData.getPostedOn());
-
+            review.setPostedOn(newReviewData.getPostedOn());
             return reviewRepository.save(review);
         }
         throw new EntityNotFoundException("Review with id " + id + " not found");

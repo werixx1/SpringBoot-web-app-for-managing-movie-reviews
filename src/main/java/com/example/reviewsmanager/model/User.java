@@ -2,6 +2,7 @@ package com.example.reviewsmanager.model;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -39,9 +40,6 @@ public class User
     @OneToMany(mappedBy = "author", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Review> reviewsPosted = new ArrayList<>();
 
-    // todo: something like private Integer numberOfReviews = reviewsPosted.size();
-    // maybe not in constructor?
-
     public User(String username, String email, String password, ProfileIcon profileIcon, Role role)
     {
         this.username = username;
@@ -50,4 +48,12 @@ public class User
         this.profileIcon = profileIcon;
         this.role = role;
     }
+
+    // returns in json how many reviews each user has
+    @JsonProperty("numberOfReviews")
+    public int getNumberOfReviews()
+    {
+        return reviewsPosted != null ? reviewsPosted.size() : 0;
+    }
+
 }

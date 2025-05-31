@@ -11,6 +11,7 @@ public interface UserRepository extends JpaRepository<User, Long>
 {
     Optional<User> findByUsername(String username);
 
+    // STATISTICS
     // user with most reviews
     @Query("""
     SELECT u

@@ -10,6 +10,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
+import java.util.Locale;
+
 @Component
 @Order(3)
 public class ReviewSampleDataLoader implements CommandLineRunner
@@ -36,8 +38,17 @@ public class ReviewSampleDataLoader implements CommandLineRunner
                     -> new IllegalStateException("User not found"));
             User user2 = userRepository.findByUsername("podsiadlo").orElseThrow(()
                     -> new IllegalStateException("User not found"));
+            User user3 = userRepository.findByUsername("moviehater1").orElseThrow(()
+                    -> new IllegalStateException("User not found"));
+            User user4 = userRepository.findByUsername("movielover2").orElseThrow(()
+                    -> new IllegalStateException("User not found"));
             Movie movie1 = movieRepository.findMovieByTitle("Everything Everywhere All At Once");
             if (movie1 == null)
+            {
+                throw new IllegalStateException("Movie not found");
+            }
+            Movie movie2 = movieRepository.findById(4L).orElse(null);
+            if (movie2 == null)
             {
                 throw new IllegalStateException("Movie not found");
             }
@@ -47,9 +58,15 @@ public class ReviewSampleDataLoader implements CommandLineRunner
             Review review2 = new Review("Meh", "I guess it was a movie? Dunno, I started" +
                     " sleeping at title screen",
                     2, user2, movie1);
+            Review review3 = new Review("epic", "the powerpoint transitions never get old",
+                    5, user4, movie2);
+            Review review4 = new Review("ok", "im just here for obiwan anyway",
+                    5, user3, movie2);
 
             reviewRepository.save(review1);
             reviewRepository.save(review2);
+            reviewRepository.save(review3);
+            reviewRepository.save(review4);
             System.out.println("Sample movies added to database");
         }
         else

@@ -29,9 +29,18 @@ public class MovieSampleDataLoader implements CommandLineRunner
                     "James Gunn", 2023);
             Movie movie3 = new Movie("Better Days", Genre.DRAMA,
                     "Derek Tsang", 2019);
+            Movie movie4 = new Movie("STAR WARS: Episode IV - New Hope", Genre.SCIFI,
+                    "George Lucas", 1977);
+            Movie movie5 = new Movie("STAR WARS: Episode V - The Empire Strikes Back", Genre.SCIFI,
+                    "George Lucas", 1980);
+            Movie movie6 = new Movie("STAR WARS: Episode III - Revenge of the Sith", Genre.SCIFI,
+                    "George Lucas", 2005);
             movieRepository.save(movie1);
             movieRepository.save(movie2);
             movieRepository.save(movie3);
+            movieRepository.save(movie4);
+            movieRepository.save(movie5);
+            movieRepository.save(movie6);
             System.out.println("Sample movies added to database");
         }
         else

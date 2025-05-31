@@ -1,7 +1,8 @@
 # Movie Reviews Manager
-A web application for managing movies, reviews and users using the springboot framework:)
-> app preview:
-![obraz](https://github.com/user-attachments/assets/9d286d7f-0aff-4453-8697-42a8cda0d5a8)
+A web application for managing movies, reviews and users using the springboot framework:) \
+
+https://github.com/user-attachments/assets/dfda8174-71c8-402e-b520-113660014bbc
+
 ## App features:
 - implemented simple website ui using thymeleaf that allows the user to view, add, edit and delete resources using the browser (forms, buttons, etc.). via localhost
 - implemented REST API that enables programmatic access to the same data (by using Postman for example) and performing all basic operations (GET, POST, PUT, DELETE)
@@ -27,6 +28,12 @@ A web application for managing movies, reviews and users using the springboot fr
   api/database/raport <- get info about number of users, reviews, movies in the database and how many movies are for each genre
   ```
 - in-memory H2 database support
+
+## Examples
+![obraz](https://github.com/user-attachments/assets/8784672c-0fec-432b-a1f0-d05bbe0616a0)
+![obraz](https://github.com/user-attachments/assets/dcc85bfc-6877-41b8-b2bd-d6db1e70ab5b)
+
+
   
 ##
 ### helpful resources for understanding springboot:
@@ -49,10 +56,12 @@ the project) ✔️
 - statistics (sorting, filtring, best rated movies, newest reviews etc) ✔️
 - raports !!!!! ✔️
 ----- 
-others:
+to do (in the future maybe):
 - DTO for creating users etc ✔️
 - guide for this repo and postman ✔️
 - link useful recources ✔️
 - *photo files in movie class for pretty display
-- explanation of conections in database
 - external folder with explanation of spring attributes etc, everything ive learned via doing this project
+- login page for users
+
+

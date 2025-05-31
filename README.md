@@ -5,7 +5,7 @@ https://github.com/user-attachments/assets/dfda8174-71c8-402e-b520-113660014bbc
 
 ## App features:
 - implemented simple website ui using thymeleaf that allows the user to view, add, edit and delete resources using the browser (forms, buttons, etc.). via localhost
-- implemented REST API that enables programmatic access to the same data (by using Postman for example) and performing all basic operations (GET, POST, PUT, DELETE)
+- implemented REST API that enables programmatic access to the same data (by using Postman for example) and performing all basic http operations (GET, POST, PUT, DELETE)
 - implemented a set of custom REST endpoints for data analytics and reports such as for example (access via localhost:8080/ + these):
   ```
   api/movies/title/{movieTitle} <- get movie by title
@@ -33,7 +33,6 @@ https://github.com/user-attachments/assets/dfda8174-71c8-402e-b520-113660014bbc
 ![obraz](https://github.com/user-attachments/assets/8784672c-0fec-432b-a1f0-d05bbe0616a0)
 ![obraz](https://github.com/user-attachments/assets/dcc85bfc-6877-41b8-b2bd-d6db1e70ab5b)
 
-
   
 ##
 ### helpful resources for understanding springboot:
@@ -45,7 +44,7 @@ https://github.com/user-attachments/assets/dfda8174-71c8-402e-b520-113660014bbc
 - thymeleaf: https://www.youtube.com/watch?v=MUhDe_yZ5WQ
 
 ## 
-(for me)
+(for me) \
 project requirements:
 - ability to create, edit, delete and browse data related to
 selected resources (e.g. books in the library, products in the store, tasks in

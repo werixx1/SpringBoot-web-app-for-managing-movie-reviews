@@ -15,32 +15,32 @@
 </head>
 <body data-bs-theme="dark">
 <div class="container my-3">
-    <h1 class="text-center mb-3">List Of Movies</h1>
-    <a class="btn btn-outline-light" href="/movies/create">New movie</a>
+    <h1 class="text-center mb-3">List Of Users</h1>
+    <a class="btn btn-outline-light" href="/users/create">New user</a>
     <table class="table">
         <thead>
         <tr>
-            <th>Title</th>
-            <th>Genre</th>
-            <th>Main Director</th>
-            <th>Release Year</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Profile Icon</th>
+            <th>Role</th>
         </tr>
         </thead>
         <tbody class="table-group-divider">
-        <tr th:each="movie: ${movies}">
-            <td th:text="${movie.title}"></td>
-            <td th:text="${movie.genre}"></td>
-            <td th:text="${movie.mainDirector}"></td>
-            <td th:text="${movie.releaseYear}"></td>
+        <tr th:each="user: ${users}">
+            <td th:text="${user.username}"></td>
+            <td th:text="${user.email}"></td>
+            <td th:text="${user.profileIcon}"></td>
+            <td th:text="${user.role}"></td>
 
             <td style="white-space: nowrap">
                 <a class="btn btn-outline-light"
-                   th:href="@{/movies/edit(id=${movie.id})}">
+                   th:href="@{/users/edit(id=${user.id})}">
                     Edit
                 </a>
                 <a class="btn btn-outline-danger"
-                   th:href="@{/movies/delete(id=${movie.id})}"
-                   onclick="return confirm('Are you sure you want to delete this movie?')">
+                   th:href="@{/users/delete(id=${user.id})}"
+                   onclick="return confirm('Are you sure you want to delete this user?')">
                     Delete
                 </a>
             </td>

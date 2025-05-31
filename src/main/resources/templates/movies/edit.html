@@ -39,6 +39,21 @@
                     <div class="col-sm-8">
                         <select id="genre" class="form-select" th:field="*{genre}">
                             <option value="SCIFI">SCIFI</option>
+                            <option value="ADVENTURE">ADVENTURE</option>
+                            <option value="ANIMATION">ANIMATION</option>
+                            <option value="COMEDY">COMEDY</option>
+                            <option value="CRIME">CRIME</option>
+                            <option value="DOCUMENTARY">DOCUMENTARY</option>
+                            <option value="DRAMA">DRAMA</option>
+                            <option value="FAMILY">FAMILY</option>
+                            <option value="FANTASY">FANTASY</option>
+                            <option value="HISTORY">HISTORY</option>
+                            <option value="HORROR">HORROR</option>
+                            <option value="MUSIC">MUSIC</option>
+                            <option value="MYSTERY">MYSTERY</option>
+                            <option value="ROMANCE">ROMANCE</option>
+                            <option value="THRILLER">THRILLER</option>
+                            <option value="WAR">WAR</option>
                         </select>
                     </div>
                 </div>
@@ -51,9 +66,10 @@
                 </div>
 
                 <div class="row mb-3">
-                    <label for="mainDirector" class="col-sm-4 col-form-label">Release Year</label>
+                    <label for="releaseYear" class="col-sm-4 col-form-label">Release Year</label>
                     <div class="col-sm-8">
-                        <input id="releaseYear" class="form-control" th:field="*{releaseYear}">
+                        <input id="releaseYear" class="form-control" th:field="*{releaseYear}"
+                        maxlength="4" pattern="\d{4}">
                     </div>
                 </div>
 

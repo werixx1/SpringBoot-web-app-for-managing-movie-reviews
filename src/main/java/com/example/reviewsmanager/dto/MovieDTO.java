@@ -1,5 +1,5 @@
-package com.example.reviewsmanager.model;
-
+package com.example.reviewsmanager.dto;
+import com.example.reviewsmanager.model.Genre;
 import lombok.Getter;
 import lombok.Setter;
 

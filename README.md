@@ -1,5 +1,5 @@
 # Movie Reviews Manager
-A web application for managing movies, reviews and users using the springboot framework:) \
+A web application for managing movies, reviews and users using the springboot framework:) 
 
 https://github.com/user-attachments/assets/dfda8174-71c8-402e-b520-113660014bbc
 

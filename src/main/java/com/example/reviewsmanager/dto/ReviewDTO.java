@@ -13,4 +13,6 @@ public class ReviewDTO
     private String textReview;
     private Integer numberOfStars;
     private LocalDateTime postedOn;
+    private Long movieId;
+    private Long userId;
 }

@@ -56,8 +56,7 @@ public class UserService
         if (optionalUser.isPresent())
         {
             User user = optionalUser.get();
-            // updating everything but email and role (it cant be changed once
-            // created)
+            user.setUsername(newUserData.getUsername());
             user.setEmail(newUserData.getEmail());
             user.setPassword(newUserData.getPassword());
             user.setProfileIcon(newUserData.getProfileIcon());

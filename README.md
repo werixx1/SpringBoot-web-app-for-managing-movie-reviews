@@ -62,5 +62,5 @@ to do (in the future maybe):
 - *photo files in movie class for pretty display
 - external folder with explanation of spring attributes etc, everything ive learned via doing this project
 - login page for users
-
+- checking if user input is correct in forms when creating / editing something
 

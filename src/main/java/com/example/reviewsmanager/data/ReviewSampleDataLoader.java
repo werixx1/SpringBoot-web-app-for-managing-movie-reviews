@@ -60,11 +60,14 @@ public class ReviewSampleDataLoader implements CommandLineRunner
                     5, user4, movie2);
             Review review4 = new Review("ok", "im just here for obiwan anyway",
                     5, user3, movie2);
+            Review review5 = new Review("cant recommend it enough", "i am out of words. watch it",
+                    5, user1, movie1);
 
             reviewRepository.save(review1);
             reviewRepository.save(review2);
             reviewRepository.save(review3);
             reviewRepository.save(review4);
+            reviewRepository.save(review5);
             System.out.println("Sample movies added to database");
         }
         else

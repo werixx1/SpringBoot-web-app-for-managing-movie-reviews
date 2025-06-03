@@ -1,6 +1,8 @@
 package com.example.reviewsmanager.repository;
 
+import com.example.reviewsmanager.model.Movie;
 import com.example.reviewsmanager.model.User;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import java.util.List;
@@ -19,7 +21,7 @@ public interface UserRepository extends JpaRepository<User, Long>
     GROUP BY u
     ORDER BY COUNT(r) DESC
     """)
-    User findUserWithMostReviews();
+    List<User> findUserWithMostReviews(Pageable pageable);
 
     // inactive users (no reviews) <- i know it doesnt really work like that,
     // its just for presentation purposes

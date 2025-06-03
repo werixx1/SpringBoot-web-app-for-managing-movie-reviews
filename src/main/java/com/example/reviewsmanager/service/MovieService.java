@@ -6,6 +6,8 @@ import com.example.reviewsmanager.repository.MovieRepository;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.PageRequest;
 import java.util.List;
 import java.util.Optional;
 
@@ -78,7 +80,9 @@ public class MovieService
 
     public Movie getMovieWithMostReviews()
     {
-        return movieRepository.findMovieWithMostReviews();
+        List<Movie> movies = movieRepository.findMovieWithMostReviews(PageRequest.of(0, 1));
+        return movies.isEmpty() ? null : movies.get(0); // if theres more than one movie with
+                                                       // the same amount of reviews it returns the first one
     }
 
 }

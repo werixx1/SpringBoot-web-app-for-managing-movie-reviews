@@ -1,9 +1,11 @@
 package com.example.reviewsmanager.service;
 
+import com.example.reviewsmanager.model.Movie;
 import com.example.reviewsmanager.model.User;
 import com.example.reviewsmanager.repository.UserRepository;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
@@ -66,7 +68,8 @@ public class UserService
 
     public User getUserWithMostReviews()
     {
-        return userRepository.findUserWithMostReviews();
+        List<User> users = userRepository.findUserWithMostReviews(PageRequest.of(0, 1));
+        return users.isEmpty() ? null : users.get(0);
     }
 
     public List<User> getInactiveUsers()

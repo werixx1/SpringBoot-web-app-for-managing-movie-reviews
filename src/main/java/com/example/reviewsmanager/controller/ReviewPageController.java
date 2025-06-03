@@ -121,6 +121,6 @@ public class ReviewPageController
         {
             reviewRepository.delete(review);
         }
-        return "redirect:/users";
+        return "redirect:/reviews";
     }
 }
